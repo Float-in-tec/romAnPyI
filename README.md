@@ -18,20 +18,24 @@ Follow the steps below:
 6) To create and connect your DB, download and install the PostgreSQL application (https://www.postgresql.org/). During installation, choose the password "Post!23!". If you want to use another password, change the text in api/__init__.py, in the part of the URI that says "Post!23". You can also follow the instructions in this video to download, install and build the DB (https://www.youtube.com/watch?v=qw--VYLpxG4&t=1966s).
 7) With PostgreSQL installed, open the SQL Shell (psql). Press enter four times, creating the default servers, DB and ports (note, if you change any of these parameters, you will also need to change the information in "api/__init__.py") and reaching the line that asks for the password that was chosen during installation. Inform the password and press enter.
 8) Return to the windows prompt and open python with the command "python" and then run the following commands:
-- ">>> from app import db"
-- ">>> db.create_all()"
-- ">>> from api import app"
-- ">>> quit()"
-9) Run: "python -m flask run" in your terminal.
-10) To connect to the IDE, go to studio.apollographql.com/dev and create a free account (you can use GitHub or email)
-11) As soon as you connect to your account, the window to set up the graph will open, but you can also click the "+ New Graph" button. Select the Graph Type "Development" and enter the endpoint "http://localhost:5000/graphql"
-12) Now you are in the GraphQL environment. To perform the operations, write the following text in "Operation":
-- mutation {
--     search(text: "AXXBLX") {
--         number
--         value
--     }
-- }
+<pre>
+>>> from app import db
+>>> db.create_all()
+>>> from api import app
+>>> quit()
+</pre>
+10) Run: "python -m flask run" in your terminal.
+11) To connect to the IDE, go to studio.apollographql.com/dev and create a free account (you can use GitHub or email)
+12) As soon as you connect to your account, the window to set up the graph will open, but you can also click the "+ New Graph" button. Select the Graph Type "Development" and enter the endpoint "http://localhost:5000/graphql"
+13) Now you are in the GraphQL environment. To perform the operations, write the following text in "Operation":
+<pre>
+mutation {  
+    search(text: "AXXBLX") {  
+        number  
+        value  
+    }  
+}
+</pre>
 13) If you want to try new values, just change the content of the text "AXXBLX", keeping the same pattern, starting with the letter A to indicate where the first digit starts and using the letter B to indicate the second digit. Example: aXIVbCXXV or ACCbXXII
 
 #### (Optional) How to connect to a cloud DB or other local DBs (alternative to local DB with postrgreSQL)
@@ -57,20 +61,24 @@ Siga os seguintes passos:
 6) Para criar e conectar sua DB, baixe e instale o aplicativo PostgreSQL (https://www.postgresql.org/). Durante a instalação, essolha a senha "Post!23!". Caso queira usar outra senha, altere o texto em api/__init__.py, no trecho da URI que está escrito o "Post!23". Você também pode seguir as instruções nesse vídeo para baixar, instalar e criar a DB (https://www.youtube.com/watch?v=qw--VYLpxG4&t=1966s).
 7) Com o PostgreSQL instalado, abra o SQL Shell (psql). Aperte enter quatro vezes, criando os servidores, DB e ports padrões (observação, caso você altere algum desses parâmetros, será necessário alterar também as informações em "api/__init__.py") e chegando à linha que pede o password/senha que foi escolhida durante a instalção. Informe-a e pressione enter.
 8) Retorne ao prompt do windows e abra o python com o comando "python" e depois execute os seguintes comandos:
-- ">>> from app import db"
-- ">>> db.create_all()"
-- ">>> from api import app"
-- ">>> quit()"
-9) Execute: "python -m flask run" no seu terminal.
-10) Para conectarmos à IDE, vá ao site studio.apollographql.com/dev e crie uma conta gratuita (pode usar GitHub ou e-mail)
-11) Assim que você conectar à sua conta, abrirá a janela para fazer o set up da graph, mas você também pode clicar no botão "+ New Graph". Selecione o Graph Type "Development" e informe o endpoint "http://localhost:5000/graphql"
-12) Pronto, agora você está no ambiente do GraphQL. Para realizar as operações, escreva o seguinte texto em "Operation":
-- mutation {
--     search(text: "AXXBLX") {
--         number
--         value
--     }
-- }
+<pre>
+>>> from app import db
+>>> db.create_all()
+>>> from api import app
+>>> quit()
+</pre>
+10) Execute: "python -m flask run" no seu terminal.
+11) Para conectarmos à IDE, vá ao site studio.apollographql.com/dev e crie uma conta gratuita (pode usar GitHub ou e-mail)
+12) Assim que você conectar à sua conta, abrirá a janela para fazer o set up da graph, mas você também pode clicar no botão "+ New Graph". Selecione o Graph Type "Development" e informe o endpoint "http://localhost:5000/graphql"
+13) Pronto, agora você está no ambiente do GraphQL. Para realizar as operações, escreva o seguinte texto em "Operation":
+<pre>
+mutation {  
+    search(text: "AXXBLX") {  
+        number  
+        value  
+    }  
+}
+</pre>
 13) Caso queira experimentar novos valores, basta alterar o conteúdo do text "AXXBLX", mantendo o mesmo padrão, iniciando com a letra A para indicar onde inicia o primeiro algarismo e utilizando a letra B para indicar o segundo algarismo. Exemplo: aXIVbCXXV ou ACCbXXII
 
 ### (Opcional) Como conectar a uma DB cloud ou outras DBs locais (alternativa à DB local com postrgreSQL)
